@@ -15,4 +15,6 @@ function addABurgerPlace(burgerPlace) {
   bestBurgersNYC.push(burgerPlace);
 }
 
-console.log(getOneBurgerPlace());
+module.exports = {
+  getOneBurgerPlace: getOneBurgerPlace,
+};

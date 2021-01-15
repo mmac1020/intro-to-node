@@ -4,6 +4,8 @@ const mainMenu = `Let's get started with some commands:
     Input 3 to output whatever text you want to a file-to-write.txt
     Input 4 to read the file-to-read.txt
   `;
+const { getOneBurgerPlace } = require('./burgers');
+const fs = require('fs');
 process.stdout.write(mainMenu);
 
 process.stdin.on('data', (data) => {
@@ -13,10 +15,12 @@ process.stdin.on('data', (data) => {
       process.stdout.write('Hello');
       break;
     case '2':
-      //What do we do here?
+      process.stdout.write(getOneBurgerPlace());
       break;
     case '3':
       const writeFileName = 'file-to-write.txt';
+      fs.readFileSync();
+      fs.writeFileSync(writeFileName, cmd);
       //What do we do here?
       break;
     case '4':
