@@ -10,11 +10,8 @@ setTimeout(function () {
   console.log('third async call');
 }, 200);
 
-function whateverIWant(data) {
-  console.log(`Whatever I want ${data}`);
-}
-
-setTimeout(function () {
-  const data = 100000000 * 123109213;
-  whateverIWant(data);
+let x = setTimeout(function () {
+  return '10 seconds have passed';
 }, 10000);
+
+console.log(x);

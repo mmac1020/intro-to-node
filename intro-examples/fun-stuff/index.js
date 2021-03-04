@@ -1,11 +1,9 @@
 const mainMenu = `Let's get started with some commands:
     Input 1 for a greeting
-    Input 2 for a nyc restaurant recommendation
-    Input 3 to output whatever text you want to a file-to-write.txt
-    Input 4 to read the file-to-read.txt
+    Input 2 to see all my burger recommendations
+    Input 3 for a random nyc burger recommendation
+    Input 4 to add a burger restaurant
   `;
-const { getOneBurgerPlace } = require('./burgers');
-const fs = require('fs');
 process.stdout.write(mainMenu);
 
 process.stdin.on('data', (data) => {
@@ -15,16 +13,13 @@ process.stdin.on('data', (data) => {
       process.stdout.write('Hello');
       break;
     case '2':
-      process.stdout.write(getOneBurgerPlace());
+      // What do we do here??
       break;
     case '3':
-      const writeFileName = 'file-to-write.txt';
-      fs.readFileSync();
-      fs.writeFileSync(writeFileName, cmd);
-      //What do we do here?
+      // What do we do here??
       break;
     case '4':
-      //What do we do here?
+      // What do we do here??
       break;
     default:
       process.stdout.write("I'm sorry, I didn't understand that :(");

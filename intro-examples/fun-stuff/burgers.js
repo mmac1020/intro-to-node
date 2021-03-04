@@ -17,4 +17,5 @@ function addABurgerPlace(burgerPlace) {
 
 module.exports = {
   getOneBurgerPlace: getOneBurgerPlace,
+  addABurgerPlace,
 };
