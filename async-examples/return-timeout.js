@@ -1,17 +1,8 @@
-setTimeout(function () {
-  console.log('first async call');
-}, 1000);
-
-setTimeout(function () {
-  console.log('second async call');
-}, 100);
-
-setTimeout(function () {
-  console.log('third async call');
-}, 200);
+let anotherFunction = (input) => {
+  console.log(input);
+};
 
 let x = setTimeout(function () {
-  return '10 seconds have passed';
-}, 10000);
-
-console.log(x);
+  const work = 1000 * 1000000;
+  anotherFunction(work);
+}, 500);

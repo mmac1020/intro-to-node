@@ -6,17 +6,21 @@ const mainMenu = `Let's get started with some commands:
   `;
 process.stdout.write(mainMenu);
 
+const { getOneBurgerPlace, getAllBurgers } = require('./burgers');
+
 process.stdin.on('data', (data) => {
   const cmd = data.toString().trim(); // This removes newlines and spaces
+  console.log('this is the command', cmd);
   switch (cmd) {
     case '1':
       process.stdout.write('Hello');
       break;
     case '2':
-      // What do we do here??
+      process.stdout.write(getAllBurgers().toString());
       break;
     case '3':
       // What do we do here??
+      process.stdout.write(getOneBurgerPlace());
       break;
     case '4':
       // What do we do here??

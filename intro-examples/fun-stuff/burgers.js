@@ -15,7 +15,12 @@ function addABurgerPlace(burgerPlace) {
   bestBurgersNYC.push(burgerPlace);
 }
 
+function getAllBurgers() {
+  return bestBurgersNYC;
+}
+
 module.exports = {
   getOneBurgerPlace: getOneBurgerPlace,
   addABurgerPlace,
+  getAllBurgers,
 };
