@@ -1,11 +1,27 @@
-// const mac = {}
-// const sarah = {}
+// Object Destructuring
+/**
+ * {
+ *  joe: joe
+ *  someFunction: someFunction
+ * }
+ */
 
-// default import
-// const aModule = require('./a-module');
-
-//Object Destructuring
-const { someFunction, sarah } = require('./a-module');
+// Object importing
+const { joe, mac, someFunction } = require('./a-module');
 
 someFunction();
-console.log(sarah);
+
+console.log(joe);
+
+/**
+ *
+ * {
+ *  name: 'joe',
+ *  job: 'instructor'
+ * }
+ */
+
+// default import
+// const whateverIWant = require('./a-module');
+
+// console.log(whateverIWant);

@@ -8,8 +8,8 @@ const mac = {
   job: 'instructor',
 };
 
-const sarah = {
-  name: 'sarah',
+const joe = {
+  name: 'joe',
   job: 'instructor',
 };
 
@@ -21,11 +21,12 @@ const someFunction = () => {
   anotherFunction();
 };
 
-// default export
-// module.exports = someFunction;
+// Default export
+// module.exports = joe;
 
 // our object export
 module.exports = {
-  sarah,
-  someFunction,
+  mac: mac,
+  joe: joe,
+  someFunction: someFunction,
 };
