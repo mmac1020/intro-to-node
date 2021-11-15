@@ -3,29 +3,48 @@
 // these DO NOT exist in node.js!!!!!!!!!!!!!!!!!!!!!!!!!
 // https://nodejs.org/docs/latest-v14.x/api/globals.html
 
-const mac = {
-  name: 'mac',
-  job: 'instructor',
-};
+// A nice note is that we DON'T include .js
+// require('./sub-directory/sub-module');
 
-const sarah = {
-  name: 'sarah',
-  job: 'instructor',
-};
+// if we DON'T specify the file, require will look for an index.js
+// require('.');
 
-const anotherFunction = () => {
-  console.log('Hello mac', mac);
-};
+// Require looks for this module inside of a "node_modules" folder
+// require('a-module');
 
-const someFunction = () => {
-  anotherFunction();
-};
+const superCoolReusableFunction = () => {
+  console.log('hello world')
+}
 
-// default export
-// module.exports = someFunction;
+const someOtherCoolFunction = () => {
+  console.log('hello world from other function');
+}
 
-// our object export
+const privateFunctionToAmodule = () => {
+  console.log('does some aModule stuff');
+}
+
+// 'module' is just a file.
+
+// module.exports is an object that says "anyone that requires me, will get what I am assigned to"
+
+// this is called the DEFAULT export
+// module.exports = superCoolReusableFunction,
+
+// Object export or explicit export
 module.exports = {
-  sarah,
-  someFunction,
-};
+  functionA: superCoolReusableFunction,
+  functionB: someOtherCoolFunction
+}
+
+// object shorthand notation
+// module.exports = {
+//   superCoolReusableFunction,
+//   someOtherCoolFunction
+// }
+
+// these are equivalent
+// module.exports = {
+//   superCoolReusableFunction: superCoolReusableFunction,
+//   someOtherCoolFunction: someOtherCoolFunction
+// }

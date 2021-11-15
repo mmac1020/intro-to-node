@@ -1,11 +1,16 @@
-// const mac = {}
-// const sarah = {}
+// require is how we 'import' or access other files' work
+// This require takes the module.export object and allows you to assign it to a variable.
+// const superCoolReusableFunction = require('./a-module');
+// superCoolReusableFunction.functionA();
+// superCoolReusableFunction.functionB();
 
-// default import
-// const aModule = require('./a-module');
+// require === {
+//   functionA: superCoolReusableFunction,
+//   functionB: someOtherCoolFunction
+// }
+console.log(require('./sub-directory/sub-module'))
+console.log(this);
+const { functionA } = require('./a-module');
 
-//Object Destructuring
-const { someFunction, sarah } = require('./a-module');
-
-someFunction();
-console.log(sarah);
+functionA();
+// functionB();
